@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+tools:showIn="navigation_view">
+
+    <group >
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:menuCategory="container"
+            android:title="@string/home"
+            android:visible="true"
+            app:showAsAction="ifRoom|withText" />
+        <item
+            android:id="@+id/nav_my_transactions"
+            android:icon="@drawable/icon_transaction"
+            android:iconTint="@color/colorAccent"
+            android:menuCategory="container"
+            android:title="@string/my_transactions"
+            app:showAsAction="ifRoom|withText"
+            tools:targetApi="o" />
+        <item
+            android:id="@+id/nav_oval_bank_products"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:menuCategory="container"
+            android:title="@string/ovalbank_products"
+            app:showAsAction="always|withText" />
+    </group>
+    <group
+        android:checkableBehavior="single"
+        android:menuCategory="alternative">
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/icon_notification"
+            android:title="@string/notifications"
+            app:showAsAction="always|withText" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/icon_settings"
+            android:iconTint="@color/colorAccent"
+            android:title="@string/settings"
+            app:showAsAction="withText"
+            tools:targetApi="o" />
+        <item
+            android:id="@+id/nav_FAQ"
+            android:icon="@drawable/icon_faq"
+            android:iconTint="@color/colorAccent"
+            android:title="@string/faq"
+            app:showAsAction="withText"
+            tools:targetApi="o" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/icon_about"
+            android:title="@string/about"
+            app:showAsAction="withText" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icon_logout"
+            android:title="@string/logout"
+            app:showAsAction="withText" />
+    </group>
+</menu>

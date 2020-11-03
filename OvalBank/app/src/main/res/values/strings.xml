@@ -1,0 +1,43 @@
+<resources>
+
+    <string name="app_name">OvalBank</string>
+    <string name="ovalbank">OvalBank</string>
+    <string name="buy_goods">Buy Goods</string>
+    <string name="cash_withdrawal">Cash Withdrawal</string>
+    <string name="tab5">Tab5</string>
+    <string name="paybill">Paybill</string>
+    <string name="more">More</string>
+    <string name="worldwide_banking">Worldwide Banking</string>
+    <string name="liberty_offers_shipping_to_over_200_countries_worldwide">Liberty offers shipping to over 200 countries worldwide</string>
+    <string name="logo">Logo</string>
+
+<!--    Navigation drawer strings-->
+
+    <string name="home">Home</string>
+    <string name="my_transactions"> My Transactions</string>
+    <string name="ovalbank_products">OvalBank Products</string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="faq">FAQ</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="user_icon">user icon</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone number</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="kenyan_flag">kenyan flag</string>
+    <string name="buy_airtime_from">Buy airtime from</string>
+    <string name="airtel_logo">airtel logo</string>
+    <string name="hint">hint</string>
+    <string name="safaricom_logo">safaricom logo</string>
+    <string name="telkom_logo">telkom logo</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="for_me">For Me</string>
+    <string name="for_others">For Others</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="proceed">Proceed</string>
+    <string name="get_started">Get Started</string>
+    <string name="my_account">My Account</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
