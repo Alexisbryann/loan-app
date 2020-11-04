@@ -60,4 +60,8 @@
     <string name="transaction_date">Transaction Date</string>
     <string name="_078319">078319</string>
     <string name="_14_06_2017">14.06.2017</string>
+    <string name="mastercard_logo">mastercard logo</string>
+    <string name="scan_code">scan code</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipisicing_elit_sed_do_eiusmod_tempor">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor</string>
+    <string name="enter_code">enter code</string>
 </resources>
