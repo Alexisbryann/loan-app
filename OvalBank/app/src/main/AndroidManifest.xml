@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".PaymentSummary"></activity>
+        <activity android:name=".OtherPayBills"></activity>
+        <activity android:name=".BuyGoodsAndServices" />
+        <activity android:name=".PaymentSummary" />
         <activity android:name=".BuyAirtime" />
         <activity
             android:name=".OvalBankDashboard2"

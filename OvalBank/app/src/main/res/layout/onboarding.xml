@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_onboarding_bg"
-    android:backgroundTint="@color/purple"
-    android:backgroundTintMode="multiply">
+    android:background="@color/purple"
+    android:foreground="@drawable/img_onboarding_bg">
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,8 +39,7 @@
         android:gravity="center"
         android:text="@string/liberty_offers_shipping_to_over_200_countries_worldwide"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -50,8 +48,12 @@
         android:id="@+id/button_getStarted"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/Light_orange"
+        android:background="@color/Dark_orange"
         android:text="@string/get_started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
