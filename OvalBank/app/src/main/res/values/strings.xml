@@ -67,5 +67,8 @@
     <string name="icon">icon</string>
     <string name="arrow">arrow</string>
     <string name="textview">TextView</string>
+    <string name="_14_250_25">14,250.25</string>
+    <string name="actual_balance">Actual Balance</string>
+    <string name="available_balance">Available Balance</string>
 
 </resources>

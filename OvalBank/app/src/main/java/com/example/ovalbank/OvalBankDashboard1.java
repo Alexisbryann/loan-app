@@ -69,6 +69,10 @@ public class OvalBankDashboard1 extends AppCompatActivity implements NavigationV
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        if (item.getItemId()==R.id.nav_home){
+
+        }
+
         return false;
     }
 }

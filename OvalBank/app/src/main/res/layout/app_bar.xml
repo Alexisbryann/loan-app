@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".OnBoarding">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -11,15 +11,131 @@
         android:layout_height="wrap_content"
         app:expanded="true">
 
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/Light_orange"
-            android:gravity="center"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            android:gravity="center|center_horizontal"
+            android:textAlignment="gravity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:titleTextColor="@color/white" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Light_orange">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/_14_250_25"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="@string/_14_250_25"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView24"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_actual_balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/actual_balance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView24"
+                app:layout_constraintStart_toStartOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+            <TextView
+                android:id="@+id/tv_available_balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/available_balance"
+                app:layout_constraintEnd_toEndOf="@+id/textView25"
+                app:layout_constraintStart_toStartOf="@+id/textView25"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textView24"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="24dp"-->
+        <!--                android:layout_marginBottom="32dp"-->
+        <!--                android:text="@string/_14_250_25"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="30sp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textView25"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="24dp"-->
+        <!--                android:text="@string/_14_250_25"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="30sp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/textView24"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                app:layout_constraintTop_toTopOf="@+id/textView24"-->
+        <!--                app:layout_constraintVertical_bias="0.0" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_actual_balance"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="8dp"-->
+        <!--                android:layout_marginBottom="4dp"-->
+        <!--                android:text="@string/actual_balance"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="@+id/textView24"-->
+        <!--                app:layout_constraintStart_toStartOf="@+id/textView24"-->
+        <!--                app:layout_constraintTop_toBottomOf="@+id/textView24" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_available_balance"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="8dp"-->
+        <!--                android:text="@string/available_balance"-->
+        <!--                app:layout_constraintEnd_toEndOf="@+id/textView25"-->
+        <!--                app:layout_constraintStart_toStartOf="@+id/textView25"-->
+        <!--                app:layout_constraintTop_toBottomOf="@+id/textView25" />-->
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
     </com.google.android.material.appbar.AppBarLayout>
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
