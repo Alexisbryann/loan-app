@@ -4,14 +4,13 @@
     <string name="ovalbank">OvalBank</string>
     <string name="buy_goods">Buy Goods</string>
     <string name="cash_withdrawal">Cash Withdrawal</string>
-    <string name="tab5">Tab5</string>
     <string name="paybill">Paybill</string>
     <string name="more">More</string>
     <string name="worldwide_banking">Worldwide Banking</string>
     <string name="liberty_offers_shipping_to_over_200_countries_worldwide">Liberty offers shipping to over 200 countries worldwide</string>
     <string name="logo">Logo</string>
 
-<!--    Navigation drawer strings-->
+    <!--    Navigation drawer strings-->
 
     <string name="home">Home</string>
     <string name="my_transactions"> My Transactions</string>
@@ -21,6 +20,9 @@
     <string name="faq">FAQ</string>
     <string name="about">About</string>
     <string name="logout">Logout</string>
+
+    <!--    -->
+
     <string name="user_icon">user icon</string>
     <string name="username">Username</string>
     <string name="phone_number">Phone number</string>
@@ -40,4 +42,22 @@
     <string name="my_account">My Account</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="buy_airtime">Buy Airtime</string>
+    <string name="chama">Chama</string>
+    <string name="loans">Loans</string>
+    <string name="sacco">Sacco</string>
+    <string name="savings">Savings</string>
+    <string name="history">History</string>
+    <string name="withdrawal_from_agent">Withdrawal From Agent</string>
+    <string name="withdrawal_from_atm">Withdrawal From ATM</string>
+    <string name="transfer_confirmed">Transfer Confirmed</string>
+    <string name="money_transfer_has_been_realized">Money transfer has been realized</string>
+    <string name="with_the_success_of_your">With the success of your</string>
+    <string name="transaction">transaction</string>
+    <string name="reference_number">Reference Number</string>
+    <string name="receipt">Receipt</string>
+    <string name="done">Done</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="_078319">078319</string>
+    <string name="_14_06_2017">14.06.2017</string>
 </resources>

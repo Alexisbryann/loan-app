@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ovalbank">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".PaymentSummary"></activity>
         <activity android:name=".BuyAirtime" />
-        <activity android:name=".OvalBankDashboard2"
-            android:label="My Account"/>
-        <activity android:name=".OvalBankDashboard1"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:label="My Account"/>
+        <activity
+            android:name=".OvalBankDashboard2"
+            android:label="My Account" />
+        <activity
+            android:name=".OvalBankDashboard1"
+            android:label="My Account"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".MasterCardMerchant" />
         <activity android:name=".OnBoarding" />
         <activity android:name=".SplashScreen">

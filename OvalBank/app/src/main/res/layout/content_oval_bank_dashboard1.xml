@@ -10,22 +10,37 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Light_orange">
+        android:background="@color/Light_orange"
+        android:fadingEdge="horizontal"
+        android:fitsSystemWindows="true"
+        android:gravity="bottom"
+        android:overScrollMode="always"
+        app:expanded="true"
+        app:layout_anchorGravity="bottom">
 
         <include
             layout="@layout/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" />
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="114dp"
+            android:id="@+id/tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:layout_gravity="bottom"
             android:background="@color/white"
-            app:tabMode="scrollable">
+            android:fitsSystemWindows="true"
+            android:isScrollContainer="true"
+            android:overScrollMode="always"
+            app:layout_scrollFlags="scroll"
+            app:tabGravity="fill"
+            app:tabIndicatorGravity="bottom"
+            app:tabMode="auto">
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_buygoods"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/basket"
@@ -34,24 +49,73 @@
                 tools:visibility="visible" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_cashwithdrawal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/cash_withdraw"
                 android:text="@string/cash_withdrawal" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem"
+                android:id="@+id/tab_paybill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/pay_bill"
                 android:text="@string/paybill" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem2"
+                android:id="@+id/tab_more"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/more"
                 android:text="@string/more" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_buyairtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_airtime" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_chama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chama" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_loans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loans" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_sacco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sacco" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_savings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/savings" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_translationhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_withdrawalfromagent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdrawal_from_agent" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_withdrawalfromatm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdrawal_from_atm" />
         </com.google.android.material.tabs.TabLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

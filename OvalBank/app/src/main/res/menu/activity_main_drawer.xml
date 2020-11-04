@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
 tools:showIn="navigation_view">
 
-    <group >
+    <group
+        android:enabled="true"
+        android:menuCategory="container">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
@@ -29,7 +31,7 @@ tools:showIn="navigation_view">
     </group>
     <group
         android:checkableBehavior="single"
-        android:menuCategory="alternative">
+        android:menuCategory="system">
         <item
             android:id="@+id/nav_notifications"
             android:icon="@drawable/icon_notification"
