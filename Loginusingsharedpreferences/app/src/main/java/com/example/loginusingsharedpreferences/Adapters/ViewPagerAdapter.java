@@ -1,10 +1,13 @@
-package com.example.loginusingsharedpreferences;
+package com.example.loginusingsharedpreferences.Adapters;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.loginusingsharedpreferences.Fragments.CategoriesFragment;
+import com.example.loginusingsharedpreferences.Fragments.HomeFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     public ViewPagerAdapter(@NonNull FragmentManager fm) {
@@ -21,14 +24,15 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
         Fragment fragment = null;
         if (position == 0) {
-            fragment = new ProductGridFragment();
+            fragment = new HomeFragment();
         }else if (position == 1){
-            fragment = new Fragment();
+            fragment = new CategoriesFragment();
         }else if (position == 2){
             fragment = new Fragment();
         }else if (position == 3){
             fragment = new Fragment();
         }
+        assert fragment != null;
         return fragment;
     }
 
@@ -37,19 +41,22 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         String title = null;
         if (position==0){
-            title = "";
+                title = "Home";
         }
             else if (position==1) {
-            title = "";
+                title = "Categories";
         }
             else if (position==2){
-                title = "";
+                title = "Account";
+        }
+            else if (position==3){
+                title = "Help";
         }
         return title;
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return 4;
     }
 }

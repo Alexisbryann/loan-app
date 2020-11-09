@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark">
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -22,17 +22,21 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
         android:contentDescription="@string/shopping_basket"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/basket"
-        app:tint="@color/colorAccent" />
+        app:tint="@color/colorA" />
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:commitIcon="@android:drawable/ic_menu_search"
+        android:queryHint="Search on Ipsum"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/navigationView"
@@ -42,6 +46,7 @@
         android:id="@+id/navigationView"
         android:layout_width="51dp"
         android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />

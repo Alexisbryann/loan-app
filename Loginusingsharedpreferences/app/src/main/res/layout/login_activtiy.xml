@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
-    android:backgroundTint="@color/design_default_color_secondary_variant"
-    android:backgroundTintMode="add">
+    android:background="@color/colorPrimary">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login"
@@ -49,7 +47,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="@string/welcome_to_please_login_to_your_account"
-        android:textColor="@color/colorLight"
+        android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,9 +92,9 @@
             android:background="@drawable/rounded_corners"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:textColor="@color/colorLight"
-            android:textColorHighlight="@color/colorLight"
-            android:textColorHint="@color/colorLight"
+            android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
             android:textColorLink="@color/colorAccent"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -125,10 +123,10 @@
             android:background="@drawable/rounded_corners"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:textColor="@color/colorLight"
-            android:textColorHighlight="@color/colorLight"
-            android:textColorHint="@color/colorLight"
-            android:textColorLink="@color/colorLight"
+            android:textColor="@color/colorAccent"
+            android:textColorHighlight="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:textColorLink="@color/colorAccent"
             android:textSize="18sp"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>

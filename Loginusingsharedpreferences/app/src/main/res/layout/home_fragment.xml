@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="add"
+    tools:context=".Fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/frame_categories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="4dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="80dp"
+                                android:layout_height="96dp"
+                                android:layout_marginStart="18dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="80dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="80dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="80dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:src="@tools:sample/avatars" />
+
+                            <TextView
+                                android:id="@+id/tv_phone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/phones"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                            <TextView
+                                android:id="@+id/tv_black_friday"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/black_friday"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                            <TextView
+                                android:id="@+id/tv_official_stores"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:text="@string/official_stores"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+                            <TextView
+                                android:id="@+id/tv_jumia_global"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:text="@string/jumia_global"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="0dp"
+                                android:layout_height="96dp"
+                                android:layout_marginTop="40dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintEnd_toEndOf="@+id/tv_phone"
+                                app:layout_constraintStart_toStartOf="@+id/tv_phone"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_phone"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="80dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="80dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                                app:layout_constraintTop_toTopOf="@+id/imageView10"
+                                tools:src="@tools:sample/avatars" />
+
+                            <ImageView
+                                android:id="@+id/imageView12"
+                                android:layout_width="80dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="16dp"
+                                android:contentDescription="@string/product_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+                                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                                app:layout_constraintTop_toTopOf="@+id/imageView11"
+                                tools:src="@tools:sample/avatars" />
+
+                            <TextView
+                                android:id="@+id/tv_televisions"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/televisions"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                                app:layout_constraintStart_toStartOf="@+id/imageView9"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+                            <TextView
+                                android:id="@+id/tv_play_win"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/play_win"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                                app:layout_constraintStart_toStartOf="@+id/imageView10"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+                            <TextView
+                                android:id="@+id/tv_jumia_food"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/jumia_food"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+                            <TextView
+                                android:id="@+id/tv_jumia_pay"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/jumia_pay"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView12"
+                                app:layout_constraintStart_toStartOf="@+id/imageView12"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_black_friday_deals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_categories">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/design_default_color_on_secondary"
+                        android:text="@string/black_friday_deals"
+                        android:textColor="@color/colorLight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/see_all"
+                        android:textColor="@color/colorLight"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginStart="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cardView"
+                        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView3"
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView"
+                        app:layout_constraintStart_toStartOf="@+id/cardView"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                        app:layout_constraintStart_toEndOf="@+id/cardView3"
+                        app:layout_constraintStart_toStartOf="@+id/cardView2"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_top_deals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_black_friday_deals">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/design_default_color_on_secondary"
+                        android:text="@string/top_deals"
+                        android:textColor="@color/colorLight"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView6"
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginStart="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView8"
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginEnd="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/cardView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView9"
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                        app:layout_constraintStart_toStartOf="@+id/cardView6"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="197dp"
+                        android:layout_height="178dp"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="@+id/cardView8"
+                        app:layout_constraintStart_toEndOf="@+id/cardView9"
+                        app:layout_constraintStart_toStartOf="@+id/cardView8"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView8" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/see_all"
+                        android:textColor="@color/colorLight"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                        app:layout_constraintEnd_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toTopOf="@+id/textView15" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

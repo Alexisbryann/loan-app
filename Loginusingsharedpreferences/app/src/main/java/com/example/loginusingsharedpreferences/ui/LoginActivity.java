@@ -1,4 +1,4 @@
-package com.example.loginusingsharedpreferences;
+package com.example.loginusingsharedpreferences.ui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.loginusingsharedpreferences.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -43,16 +45,20 @@ public class LoginActivity extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
 
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-               validateUser();
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
             }
+//               validateUser();
+//            }
         });
     }
     public void validateUser(){

@@ -9,8 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg2"
-        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:background="@color/colorPrimary"
         android:backgroundTintMode="add">
 
         <com.google.android.material.button.MaterialButton
@@ -30,7 +29,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
             app:rippleColor="@android:color/holo_red_dark"
-            app:strokeColor="@color/colorLight" />
+            app:strokeColor="@color/colorAccent" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -52,11 +51,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="@string/confirm_password"
-            android:textColorHint="@color/colorLight"
+            android:textColorHint="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:boxStrokeWidthFocused="0dp"
-            app:counterOverflowTextColor="@color/colorLight"
-            app:endIconTint="@color/colorLight"
+            app:counterOverflowTextColor="@color/colorAccent"
+            app:endIconTint="@color/colorAccent"
             app:errorEnabled="true"
             app:hintEnabled="true"
             app:hintTextColor="@color/colorAccent"
@@ -73,10 +72,10 @@
                 android:cursorVisible="true"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:textColor="@color/colorLight"
-                android:textColorHighlight="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textColorLink="@color/colorLight"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:textInputLayoutFocusedRectEnabled="true" />
@@ -90,7 +89,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="@string/first_name"
-            android:textColorHint="@color/colorLight"
+            android:textColorHint="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:boxStrokeWidthFocused="0dp"
             app:errorEnabled="true"
@@ -107,10 +106,10 @@
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:textColor="@color/colorLight"
-                android:textColorHighlight="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textColorLink="@color/colorLight"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -124,7 +123,7 @@
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:hint="@string/second_name"
-            android:textColorHint="@color/colorLight"
+            android:textColorHint="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:boxStrokeWidthFocused="0dp"
             app:errorEnabled="true"
@@ -141,10 +140,10 @@
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:textColor="@color/colorLight"
-                android:textColorHighlight="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textColorLink="@color/colorLight"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +155,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="@string/username"
-            android:textColorHint="@color/colorLight"
+            android:textColorHint="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:boxStrokeWidthFocused="0dp"
             app:errorEnabled="true"
@@ -173,10 +172,10 @@
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:textColor="@color/colorLight"
-                android:textColorHighlight="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textColorLink="@color/colorLight"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -189,7 +188,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="@string/e_mail"
-            android:textColorHint="@color/colorLight"
+            android:textColorHint="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:boxStrokeWidthFocused="0dp"
             app:errorEnabled="true"
@@ -206,10 +205,10 @@
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:textColor="@color/colorLight"
-                android:textColorHighlight="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textColorLink="@color/colorLight"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -221,7 +220,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="@string/enter_password"
-            android:textColorHint="@color/colorLight"
+            android:textColorHint="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:boxStrokeWidthFocused="0dp"
             app:errorEnabled="true"
@@ -238,10 +237,10 @@
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:textColor="@color/colorLight"
-                android:textColorHighlight="@color/colorLight"
-                android:textColorHint="@color/colorLight"
-                android:textColorLink="@color/colorLight"
+                android:textColor="@color/colorAccent"
+                android:textColorHighlight="@color/colorAccent"
+                android:textColorHint="@color/colorAccent"
+                android:textColorLink="@color/colorAccent"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 

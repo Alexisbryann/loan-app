@@ -1,10 +1,12 @@
-package com.example.loginusingsharedpreferences;
+package com.example.loginusingsharedpreferences.ui;
 
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.viewpager.widget.ViewPager;
 
         import android.os.Bundle;
 
+        import com.example.loginusingsharedpreferences.Adapters.ViewPagerAdapter;
+        import com.example.loginusingsharedpreferences.R;
         import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
