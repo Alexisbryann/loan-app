@@ -54,10 +54,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
 //            }
-               validateUser();
+//               validateUser();
             }
         });
     }
@@ -79,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         }
         if (mUname2.isEmpty()||!mUname1.matches(mUname2)){mUsername.setError("User does not exist");}
+        if (!mPword1.matches(mPword2)) {mPassword.setError("Wrong password");}
         if (mUname1.isEmpty()){mUsername.setError("Username can not be empty");}
         if (mPword1.isEmpty()){mPassword.setError("Password can not be empty");}
     }

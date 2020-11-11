@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.loginusingsharedpreferences.Fragments.BlackFridayDealsFragment;
 import com.example.loginusingsharedpreferences.Fragments.CategoriesFragment;
 import com.example.loginusingsharedpreferences.Fragments.HomeFragment;
 
@@ -28,7 +29,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         }else if (position == 1){
             fragment = new CategoriesFragment();
         }else if (position == 2){
-            fragment = new Fragment();
+            fragment = new BlackFridayDealsFragment();
         }else if (position == 3){
             fragment = new Fragment();
         }
@@ -47,7 +48,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 title = "Categories";
         }
             else if (position==2){
-                title = "Account";
+                title = "Black Friday";
         }
             else if (position==3){
                 title = "Help";
