@@ -52,7 +52,7 @@
                                 android:contentDescription="@string/product_image"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                tools:src="@tools:sample/avatars" />
+                                tools:src="@drawable/phones" />
 
                             <ImageView
                                 android:id="@+id/imageView5"

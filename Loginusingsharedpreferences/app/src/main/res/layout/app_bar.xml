@@ -39,16 +39,6 @@
         android:queryHint="Search on Ipsum"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/navigationView"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigationView"
-        android:layout_width="51dp"
-        android:layout_height="0dp"
-        android:background="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
