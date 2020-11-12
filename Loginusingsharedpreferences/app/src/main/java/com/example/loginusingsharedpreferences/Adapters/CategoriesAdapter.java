@@ -41,7 +41,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     @Override
     public void onBindViewHolder(@NonNull CategoriesAdapter.CategoriesViewHolder holder, int position) {
 
-        holder.setData(holder.getAdapterPosition());
+        holder.setData((CategoriesModel) mValues.get(position));
     }
 
     @Override
@@ -49,11 +49,11 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
         return mValues.size();
     }
 
-    public static class CategoriesViewHolder extends RecyclerView.ViewHolder {
+    public class CategoriesViewHolder extends RecyclerView.ViewHolder {
 
          public ImageView mImg;
          public TextView mTv1;
-        int item;
+        CategoriesModel item;
 
         public CategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,10 +62,10 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
             mTv1 = itemView.findViewById(R.id.tv_product);
 
         }
-        public void setData(int item) {
+        public void setData(CategoriesModel item) {
             this.item = item;
-            mTv1.setText(CategoriesModel.getProductName());
-            mImg.setImageResource(CategoriesModel.getImage());
+            mTv1.setText(item.getProductName());
+            mImg.setImageResource(item.getImage());
 
         }
     }

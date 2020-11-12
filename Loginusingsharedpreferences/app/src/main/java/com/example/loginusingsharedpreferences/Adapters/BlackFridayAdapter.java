@@ -12,14 +12,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.loginusingsharedpreferences.Models.BlackFridayModel;
 import com.example.loginusingsharedpreferences.R;
+
+import java.util.ArrayList;
 
 public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.ViewHolder> {
 
     private final Context mContext;
+    private final ArrayList mList;
 
-    public BlackFridayAdapter(Context context){
+
+    public BlackFridayAdapter(Context context, ArrayList list){
         mContext = context;
+        mList = list;
     }
     @NonNull
     @Override
@@ -32,16 +38,18 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull BlackFridayAdapter.ViewHolder holder, int position) {
-        holder.mTv1.setText("Mimi");
-        holder.mTv2.setText("Wewe");
-        holder.mTv3.setText("Sisi");
-        holder.mImageView.setImageResource(R.drawable.phones);
-        holder.mRatingBar.setMax(5);
+//        holder.mTv1.setText("Mimi");
+//        holder.mTv2.setText("Wewe");
+//        holder.mTv3.setText("Sisi");
+//        holder.mImageView.setImageResource(R.drawable.phones);
+//        holder.mRatingBar.setMax(5);
+        holder.setData((BlackFridayModel) mList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+
+        return mList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -52,6 +60,7 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
         private final TextView mTv3;
         private final RatingBar mRatingBar;
         private final Button mBtn1;
+        BlackFridayModel item;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,5 +72,16 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
             mRatingBar = itemView.findViewById(R.id.ratingBar);
             mBtn1 = itemView.findViewById(R.id.btn_add_to_cart);
         }
+        private void setData(BlackFridayModel item) {
+            this.item = item;
+
+            mImageView.setImageResource(item.getImage());
+            mTv1.setText(item.product_description);
+            mTv2.setText(item.getPrice());
+            mTv3.setText(item.getExpress());
+            mRatingBar.getRating();
+        }
     }
+
+
 }

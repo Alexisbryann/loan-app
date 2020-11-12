@@ -2,15 +2,15 @@ package com.example.loginusingsharedpreferences.Models;
 
 public class CategoriesModel {
 
-    static String ProductName;
-    static int image;
+    public String ProductName;
+    public int Image;
 
     public CategoriesModel(String productName, int image) {
         ProductName = productName;
-        CategoriesModel.image = image;
+        Image = image;
     }
 
-    public static String getProductName() {
+    public String getProductName() {
         return ProductName;
     }
 
@@ -18,12 +18,11 @@ public class CategoriesModel {
         ProductName = productName;
     }
 
-    public static int getImage() {
-        return image;
+    public int getImage() {
+        return Image;
     }
 
-    public void setImage(int image) {
-        CategoriesModel.image = image;
+    public void setImage(int image) { Image = image;
     }
 }
 
