@@ -38,11 +38,7 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull BlackFridayAdapter.ViewHolder holder, int position) {
-//        holder.mTv1.setText("Mimi");
-//        holder.mTv2.setText("Wewe");
-//        holder.mTv3.setText("Sisi");
-//        holder.mImageView.setImageResource(R.drawable.phones);
-//        holder.mRatingBar.setMax(5);
+
         holder.setData((BlackFridayModel) mList.get(position));
     }
 
@@ -76,10 +72,16 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
             this.item = item;
 
             mImageView.setImageResource(item.getImage());
-            mTv1.setText(item.product_description);
+            mTv1.setText(item.getProduct_description());
             mTv2.setText(item.getPrice());
             mTv3.setText(item.getExpress());
-            mRatingBar.getRating();
+            mRatingBar.setRating(5);
+            mBtn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mBtn1.setVisibility(View.INVISIBLE);
+                }
+            });
         }
     }
 

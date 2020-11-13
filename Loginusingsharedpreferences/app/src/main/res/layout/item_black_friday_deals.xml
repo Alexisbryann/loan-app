@@ -22,8 +22,12 @@
                 android:id="@+id/cardView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="2dp"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="false"
                 app:cardUseCompatPadding="true"
                 app:contentPadding="2dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +44,6 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:contentDescription="@string/product_image"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:srcCompat="@tools:sample/avatars" />
@@ -51,7 +54,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"
-                        android:textSize="14sp"
+                        android:layout_marginEnd="4dp"
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView8"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -61,20 +65,27 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="4dp"
-                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toEndOf="@+id/imageView8"
                         app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
                     <RatingBar
                         android:id="@+id/ratingBar"
-                        android:layout_width="0dp"
+                        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"
+                        android:indeterminate="false"
+                        android:isScrollContainer="false"
                         android:numStars="5"
+                        android:progressTint="@color/colorA"
                         app:layout_constraintStart_toEndOf="@+id/imageView8"
                         app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
@@ -85,6 +96,7 @@
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"
                         android:layout_marginEnd="4dp"
+                        android:textColor="@android:color/holo_red_dark"
                         android:textSize="14sp"
                         android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -93,18 +105,46 @@
 
                     <Button
                         android:id="@+id/btn_add_to_cart"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginBottom="4dp"
-                        android:background="@color/colorA"
+                        android:background="@drawable/rounded_corners"
+                        android:backgroundTint="@color/colorA"
                         android:text="@string/add_to_cart"
                         android:textColor="@color/colorAccent"
                         android:textSize="14sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_express" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_express"
+                        app:layout_constraintVertical_bias="0.585" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:backgroundTintMode="add"
+                        android:contentDescription="@string/add"
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_add_to_cart"
+                        app:layout_constraintStart_toStartOf="@+id/btn_add_to_cart"
+                        app:layout_constraintTop_toTopOf="@+id/btn_add_to_cart"
+                        app:srcCompat="@drawable/add" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:contentDescription="@string/substract"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView"
+                        app:srcCompat="@drawable/subtract_icon" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
