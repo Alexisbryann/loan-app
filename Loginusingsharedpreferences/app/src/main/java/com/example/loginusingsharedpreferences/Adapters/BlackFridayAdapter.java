@@ -1,6 +1,7 @@
 package com.example.loginusingsharedpreferences.Adapters;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.example.loginusingsharedpreferences.Models.BlackFridayModel;
 import com.example.loginusingsharedpreferences.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.ViewHolder> {
 
@@ -57,6 +59,10 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
         private final RatingBar mRatingBar;
         private final Button mBtn1;
         BlackFridayModel item;
+        private final ImageView mAdd;
+        private final ImageView mSubtract;
+        private final TextView mNum;
+        int num = 1;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,6 +73,9 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
             mTv3 = itemView.findViewById(R.id.tv_express);
             mRatingBar = itemView.findViewById(R.id.ratingBar);
             mBtn1 = itemView.findViewById(R.id.btn_add_to_cart);
+            mAdd = itemView.findViewById(R.id.img_add);
+            mSubtract = itemView.findViewById(R.id.img_subtract);
+            mNum = itemView.findViewById(R.id.tv_num);
         }
         private void setData(BlackFridayModel item) {
             this.item = item;
@@ -80,6 +89,24 @@ public class BlackFridayAdapter extends RecyclerView.Adapter<BlackFridayAdapter.
                 @Override
                 public void onClick(View v) {
                     mBtn1.setVisibility(View.INVISIBLE);
+                    mNum.setText(String.valueOf(num));
+                }
+            });
+            mAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mNum.setText(String.valueOf(++num));
+                }
+            });
+            mSubtract.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int sub = Integer.parseInt(mNum.getText().toString());
+                    if (sub > 1) {
+                        mNum.setText(String.valueOf(--num));
+                    }else {
+                        mBtn1.setVisibility(View.VISIBLE);
+                    }
                 }
             });
         }

@@ -1,7 +1,9 @@
 package com.example.loginusingsharedpreferences.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.DataSetObserver;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,18 +12,24 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.loginusingsharedpreferences.Fragments.BlackFridayDealsFragment;
 import com.example.loginusingsharedpreferences.Fragments.CategoriesFragment;
 import com.example.loginusingsharedpreferences.Models.CategoriesModel;
 import com.example.loginusingsharedpreferences.R;
 
 import java.util.ArrayList;
 
-public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder>{
+public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder> implements View.OnClickListener {
 
     private final Context mContext;
     ArrayList mValues;
+    private int mPos;
+    FragmentManager mManager;
 
     public CategoriesAdapter(Context context, ArrayList values
     ){
@@ -42,11 +50,26 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     public void onBindViewHolder(@NonNull CategoriesAdapter.CategoriesViewHolder holder, int position) {
 
         holder.setData((CategoriesModel) mValues.get(position));
+
+        mPos = holder.getAdapterPosition();
     }
 
     @Override
     public int getItemCount() {
         return mValues.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (mPos){
+            case 0:
+                Fragment fragment = new BlackFridayDealsFragment();
+//                mManager = getClass().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = mManager.beginTransaction();
+                fragmentTransaction.replace(R.id.rv_black_friday, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+        }
     }
 
     public class CategoriesViewHolder extends RecyclerView.ViewHolder {

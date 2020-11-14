@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.loginusingsharedpreferences.Fragments.BlackFridayDealsFragment;
 import com.example.loginusingsharedpreferences.Fragments.CategoriesFragment;
-import com.example.loginusingsharedpreferences.Fragments.HomeActivity;
+import com.example.loginusingsharedpreferences.Fragments.HomeFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     public ViewPagerAdapter(@NonNull FragmentManager fm) {
@@ -25,7 +25,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
         Fragment fragment = null;
         if (position == 0) {
-            fragment = new Fragment();
+            fragment = new HomeFragment();
         }else if (position == 1){
             fragment = new CategoriesFragment();
         }else if (position == 2){

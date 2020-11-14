@@ -16,7 +16,7 @@ import com.example.loginusingsharedpreferences.R;
 
 import java.util.ArrayList;
 
-public class CategoriesFragment extends Fragment {
+public class CategoriesFragment extends Fragment implements View.OnClickListener{
 
     ArrayList<CategoriesModel> categoryList;
     private CategoriesAdapter mCategoriesAdapter;
@@ -46,5 +46,11 @@ public class CategoriesFragment extends Fragment {
         mRecyclerView.setAdapter( mCategoriesAdapter);
         
         return view;
+    }
+
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

@@ -1,6 +1,6 @@
 package com.example.loginusingsharedpreferences.ui;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
         import androidx.fragment.app.Fragment;
         import androidx.fragment.app.FragmentManager;
         import androidx.fragment.app.FragmentTransaction;
@@ -16,25 +16,11 @@ package com.example.loginusingsharedpreferences.ui;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment mCategories;
-    Fragment mBlackFriday;
-    FragmentManager mManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        mCategories = new CategoriesFragment();
-//        mBlackFriday = new BlackFridayDealsFragment();
-////        Fragment categories = new CategoriesFragment();
-//
-//        mManager = getSupportFragmentManager();
-//        FragmentTransaction transaction = mManager.beginTransaction();
-//        transaction.add(R.id.container1,mCategories);
-//        transaction.add(R.id.container2,mBlackFriday);
-//
-//        transaction.commit();
 
         ViewPager viewPager = findViewById(R.id.viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());

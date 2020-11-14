@@ -107,6 +107,7 @@
                         android:id="@+id/btn_add_to_cart"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
                         android:background="@drawable/rounded_corners"
                         android:backgroundTint="@color/colorA"
                         android:text="@string/add_to_cart"
@@ -115,36 +116,41 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_express"
-                        app:layout_constraintVertical_bias="0.585" />
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/img_subtract"
                         android:layout_width="50dp"
                         android:layout_height="0dp"
                         android:backgroundTintMode="add"
                         android:contentDescription="@string/add"
-                        app:layout_constraintBottom_toBottomOf="@+id/btn_add_to_cart"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/btn_add_to_cart"
                         app:layout_constraintTop_toTopOf="@+id/btn_add_to_cart"
-                        app:srcCompat="@drawable/add" />
+                        app:srcCompat="@drawable/ic_minus"
+                        app:tint="@color/colorA" />
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/img_add"
                         android:layout_width="50dp"
                         android:layout_height="0dp"
                         android:contentDescription="@string/substract"
-                        app:layout_constraintBottom_toBottomOf="@+id/textView"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/textView"
-                        app:srcCompat="@drawable/subtract_icon" />
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_add_to_cart"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_add_to_cart"
+                        app:layout_constraintStart_toEndOf="@+id/tv_num"
+                        app:layout_constraintTop_toTopOf="@+id/btn_add_to_cart"
+                        app:srcCompat="@drawable/ic_plus"
+                        app:tint="@color/colorA" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/tv_num"
                         android:layout_width="50dp"
-                        android:layout_height="0dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                        android:layout_height="48dp"
+                        android:gravity="center|center_vertical"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_add_to_cart"
+                        app:layout_constraintStart_toEndOf="@+id/img_subtract"
+                        app:layout_constraintTop_toTopOf="@+id/btn_add_to_cart" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
