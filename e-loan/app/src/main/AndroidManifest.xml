@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.alexis.e_loan">
-
+    package="com.alexis.e_loan" >
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
-        tools:replace="android:icon"
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:fullBackupContent="true">
+        tools:replace="android:icon" >
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8199773971116374~1310145882"/>
-        <activity android:name="com.alexis.e_loan.PayActivity" />
-        <activity android:name="com.alexis.e_loan.HomeActivity" />
+            android:value="ca-app-pub-8199773971116374~1310145882" />
+
+        <activity android:name=".HomeActivity" />
         <activity
-            android:name="com.alexis.e_loan.LearnMoreActivity"
-            android:parentActivityName="com.alexis.e_loan.MainActivity"
+            android:name=".LearnMoreActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat" />
         <activity
-            android:name="com.alexis.e_loan.SignUp"
+            android:name=".SignUp"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateVisible">
+            android:windowSoftInputMode="stateVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.alexis.e_loan.MainActivity" />
-        <activity android:name="com.alexis.e_loan.OtpConfirmationActivity" />
-
+        <activity android:name=".MainActivity" />
+        <activity android:name=".OtpConfirmationActivity" />
+        <activity android:name=".PrivacyPolicy" />
     </application>
 
 </manifest>

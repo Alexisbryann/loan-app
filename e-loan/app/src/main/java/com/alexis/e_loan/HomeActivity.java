@@ -34,12 +34,10 @@ public class HomeActivity extends AppCompatActivity {
     private Handler hdlr = new Handler();
     private CardView mTermsAndConditions;
     private Button mPayFee;
-    private Button mOkButton;
-    private ImageView mCancel;
-    private EditText mEnterPhone;
-    private TextView mAmt;
-    private ProgressDialog mProgressDialog;
     private AdView mAdView;
+    private CardView mPrivacy;
+    private Button mRead;
+    private CardView mCardCheckLimit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +52,10 @@ public class HomeActivity extends AppCompatActivity {
         mTermsAndConditions = findViewById(R.id.card_view_terms_and_conditions);
         mPayFee = findViewById(R.id.button_pay_fee);
         mCheckLimit = findViewById(R.id.button_check_limit);
+        mCardCheckLimit = findViewById(R.id.card_view_check_limit);
+        mPrivacy = findViewById(R.id.card_view_privacy_policy);
+        mRead = findViewById(R.id.button_privacy_policy);
+//        mCheckLimit.setVisibility(View.INVISIBLE);
 
 //        admob
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -65,6 +67,14 @@ public class HomeActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        mRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, PrivacyPolicy.class);
+                startActivity(intent);
+            }
+        });
+
         mCheckLimit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,133 +85,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-//        mPayFee.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                launchDialog();
-//            }
-//        });
         mPayFee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mPayFee.setEnabled(false);
                 Toast.makeText(getApplicationContext(),"You currently do not qualify for a loan",Toast.LENGTH_LONG).show();
-//                Intent payIntent = new Intent(HomeActivity.this, PayActivity.class);
-//                startActivity(payIntent);
+
             }
         });
     }
-
-//    private void launchDialog() {
-//
-//        int width = (int)(getResources().getDisplayMetrics().widthPixels);
-//        int height = (int)(getResources().getDisplayMetrics().heightPixels*0.50);
-//
-//
-//            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-//            final AlertDialog alertDialog = alertBuilder.create();
-//            alertDialog.show();
-//            alertDialog.getWindow().setLayout(width,height);
-//            final LayoutInflater inflater = this.getLayoutInflater();
-//            final View alertView = inflater.inflate(R.layout.activity_pay,null);
-//            alertDialog.getWindow().setContentView(alertView);
-//
-//        mOkButton = findViewById(R.id.button_OK);
-//        mCancel = findViewById(R.id.image_view_cancel);
-//        mAmt = findViewById(R.id.text_amount);
-//
-//        mCancel.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    alertDialog.dismiss();
-//                }
-//            });
-//
-//            mOkButton.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-////                    alertDialog.dismiss();
-//                    mEnterPhone = findViewById(R.id.edt_enter_phone);
-//                    String phone_number = mEnterPhone.getText().toString();
-//                    String amount = mAmt.getText().toString();
-//                    performSTKPush(phone_number,amount);
-//                };
-//            });
-//    }
-//    public void getAccessToken() {
-//        mApiClient.setGetAccessToken(true);
-//        mApiClient.mpesaService().getAccessToken().enqueue(new Callback<AccessToken>() {
-//            @Override
-//            public void onResponse(@NonNull Call<AccessToken> call, @NonNull Response<AccessToken> response) {
-//
-//                if (response.isSuccessful()) {
-//                    mApiClient.setAuthToken(response.body().accessToken);
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(@NonNull Call<AccessToken> call, @NonNull Throwable t) {
-//
-//            }
-//        });
-//    }
-
-//    private void processPayment() {
-//
-//        performSTKPush(phone_number,amount);
-//
-//    }
-
-//    private void performSTKPush(String phone_number, String amount) {
-//        mProgressDialog.setMessage("Processing your request");
-//        mProgressDialog.setTitle("Please Wait...");
-//        mProgressDialog.setIndeterminate(true);
-//        mProgressDialog.show();
-//        String timestamp = Utils.getTimestamp();
-//        STKPush stkPush = new STKPush(
-//                BUSINESS_SHORT_CODE,
-//                Utils.getPassword(BUSINESS_SHORT_CODE, PASSKEY, timestamp),
-//                timestamp,
-//                TRANSACTION_TYPE,
-//                String.valueOf(amount),
-//                Utils.sanitizePhoneNumber(phone_number),
-//                PARTYB,
-//                Utils.sanitizePhoneNumber(phone_number),
-//                CALLBACKURL,
-//                "MPESA Android Test", //Account reference
-//                "Testing"  //Transaction description
-//        );
-//
-//        mApiClient.setGetAccessToken(false);
-//
-//        //Sending the data to the Mpesa API, remember to remove the logging when in production.
-//        mApiClient.mpesaService().sendPush(stkPush).enqueue(new Callback<STKPush>() {
-//            @Override
-//            public void onResponse(@NonNull Call<STKPush> call, @NonNull Response<STKPush> response) {
-//                mProgressDialog.dismiss();
-//                try {
-//                    if (response.isSuccessful()) {
-//                        Timber.d("post submitted to API. %s", response.body());
-//                    } else {
-//                        Timber.e("Response %s", response.errorBody().string());
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(@NonNull Call<STKPush> call, @NonNull Throwable t) {
-//                mProgressDialog.dismiss();
-//                Timber.e(t);
-//            }
-//        });
-//    }
-
-//    @Override
-//    public void onPointerCaptureChanged(boolean hasCapture) {
-//
-//    }
 
     private void setProgressValue(final int progress) {
         // set the progress
@@ -238,6 +129,17 @@ public class HomeActivity extends AppCompatActivity {
             loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(loginIntent);
             finish();
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = getIntent();
+        int mVal = intent.getIntExtra("ACCEPT", 0);
+        if (mVal == 1) {
+            mCardCheckLimit.setVisibility(View.VISIBLE);
+        } else {
+            mCardCheckLimit.setVisibility(View.INVISIBLE);
         }
     }
 }
