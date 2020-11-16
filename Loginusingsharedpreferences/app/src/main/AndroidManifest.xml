@@ -21,7 +21,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".ui.RegisterActivity"
             android:label="Register"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
 
     </application>
 
