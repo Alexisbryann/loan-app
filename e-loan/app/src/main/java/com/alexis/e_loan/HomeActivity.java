@@ -97,7 +97,7 @@ public class HomeActivity extends AppCompatActivity {
         mPayFee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"You currently do not qualify for a loan",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Sorry "+ mSharedPreferences.getString(Fname,"")+", you currently do not qualify for a loan.",Toast.LENGTH_LONG).show();
 
             }
         });

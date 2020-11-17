@@ -76,9 +76,9 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-        if (mUname2.isEmpty()||!mUname1.matches(mUname2)){mUsername.setError("User does not exist");}
+        if (mUname2.isEmpty()||!mUname1.matches(mUname2)){mUsername.setError("User does not exist, please register.");}
         if (!mPword1.matches(mPword2)) {mPassword.setError("Wrong password");}
-        if (mUname1.isEmpty()){mUsername.setError("Username can not be empty");}
+        if (mUname1.isEmpty()){mUsername.setError("Phone number can not be empty");}
         if (mPword1.isEmpty()){mPassword.setError("Password can not be empty");}
     }
 }

@@ -21,10 +21,6 @@
         <activity android:name=".HomeActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
         <activity
-            android:name=".LearnMoreActivity"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat" />
-        <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
             android:windowSoftInputMode="stateVisible" >
@@ -34,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
         <activity android:name=".PrivacyPolicy"
