@@ -30,29 +30,38 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/privacy_policy_bentech_solutions"
+                    android:textColor="@color/common_google_signin_btn_text_light_focused"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_accept_terms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/rounded_button"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:backgroundTint="@color/material_deep_teal_50"
+                    app:backgroundTint="@color/material_deep_teal_50"
+                    app:rippleColor="@android:color/holo_red_dark"
                     android:text="@string/accept_terms_and_conditions"
                     app:layout_constraintBottom_toTopOf="@+id/btn_decline"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_decline"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:background="@drawable/rounded_button"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:backgroundTint="@color/material_deep_teal_50"
+                    app:backgroundTint="@color/material_deep_teal_50"
+                    app:rippleColor="@android:color/holo_red_dark"
                     android:text="@string/decline_and_exit_app"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/btn_accept_terms"

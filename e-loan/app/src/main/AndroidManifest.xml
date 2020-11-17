@@ -18,14 +18,15 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8199773971116374~1310145882" />
 
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
         <activity
             android:name=".LearnMoreActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat" />
         <activity
-            android:name=".SignUp"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
             android:windowSoftInputMode="stateVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,8 +35,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".OtpConfirmationActivity" />
-        <activity android:name=".PrivacyPolicy" />
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".PrivacyPolicy"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
     </application>
 
 </manifest>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#D0001B</color>
     <color name="e_loan">#F44336</color>
     <color name="text">#FFFFFF</color>
     <color name="skyblue">#87cefa</color>
     <color name="button">@color/cardview_dark_background</color>
     <color name="chk_lmt_btn">#008000</color>
+    <color name="colorPrimary">#00498F</color>
+    <color name="colorPrimaryDark">#3A060B</color>
+    <color name="colorA">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorLight">#87cefa</color>
 
 </resources>

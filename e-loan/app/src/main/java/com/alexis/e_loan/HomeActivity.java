@@ -2,6 +2,7 @@ package com.alexis.e_loan;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -38,6 +39,11 @@ public class HomeActivity extends AppCompatActivity {
     private CardView mPrivacy;
     private Button mRead;
     private CardView mCardCheckLimit;
+    private TextView mTvHello;
+
+    public static  String MyPreferences = "myPrefs";
+    public static final String Fname = "First name";
+    private SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,7 @@ public class HomeActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
+        mSharedPreferences = getSharedPreferences(MyPreferences,MODE_PRIVATE);
 
         mProgressBar = findViewById(R.id.progressBar3);
         mCongratulations = findViewById(R.id.text_view_congratulations);
@@ -55,8 +62,10 @@ public class HomeActivity extends AppCompatActivity {
         mCardCheckLimit = findViewById(R.id.card_view_check_limit);
         mPrivacy = findViewById(R.id.card_view_privacy_policy);
         mRead = findViewById(R.id.button_privacy_policy);
-//        mCheckLimit.setVisibility(View.INVISIBLE);
+        mTvHello = findViewById(R.id.tv_hello);
 
+        String greeting = "HELLO "+mSharedPreferences.getString(Fname,"") +" !";
+        mTvHello.setText(greeting);
 //        admob
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -122,14 +131,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-
-        if (mCurrentUser == null){
-            Intent loginIntent = new Intent(HomeActivity.this,SignUp.class);
-            loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(loginIntent);
-            finish();
-        }
     }
     @Override
     protected void onResume() {

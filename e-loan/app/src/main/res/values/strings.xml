@@ -1,4 +1,29 @@
 <resources>
+
+
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_yet_register_here">Don\'t have an account yet or have forgotten your password? <i><u>Register here</u></i></string>
+    <string name="first_name">First name</string>
+    <string name="second_name">Second name</string>
+    <string name="username">Username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="register">register</string>
+    <string name="welcome_to_please_login_to_your_account">Lorem Ipsum neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…</string>
+    <string name="company_logo">company logo</string>
+    <string name="jina">jina</string>
+    <string name="pass_not_match">Passwords don\'t match</string>
+    <string name="fname_error">Enter first name</string>
+    <string name="sname_error">Enter second name</string>
+    <string name="username_error">Enter username</string>
+    <string name="email_error">Enter e-mail</string>
+    <string name="password_error">Enter password</string>
+    <string name="confirm_password_error">Confirm password</string>
+
+
+
     <string name="app_name">e-loan</string>
     <string name="learn_more">Learn more</string>
     <string name="sign_up">Sign up</string>
@@ -28,7 +53,7 @@
     <string name="otp_verification_failed">OTP verification failed, please try again</string>
     <string name="verification_failed">Verification Failed, please try again.</string>
     <string name="hello">HELLO AND WELCOME TO E-LOAN</string>
-    <string name="welcome1">Welcome to Easy loan. Our mobile loans are quick, easy to apply and do not accrue interest like other mobile loans in the market. Proceed to check your loan limit and borrow an unsecured loan within 5 minutes straight to your M-PESA !</string>
+    <string name="welcome1">Welcome to Easy loan. Our mobile loans are quick, easy to apply and unlike other mobile loans in the market, do not accrue interest. Proceed to check your loan limit and borrow an unsecured loan within 5 minutes straight to your M-PESA !</string>
     <string name="text_view_congratulations">Sorry, you do not qualify for a loan at this time. However, you should not lose hope, check back again after one month</string>
     <string name="button_check_limit">check your limit</string>
     <string name="text_view_conditions">To borrow your first loan, you are required to pay a processing fee of 100 kes.This fee will settle your interest, therefore, your loan will not attract any interest. You will pay back the exact amount loaned out to you. Isn\'t that awesome?</string>
@@ -36,7 +61,7 @@
     <string name="terms_conditions">TERMS AND CONDITIONS</string>
     <string name="logoo">Logoo</string>
     <string name="img_cancel">Cancel</string>
-    <string name="phone_number">Phone number:</string>
+    <string name="phone_number">Phone number</string>
     <string name="amount">Amount :</string>
     <string name="text_view_amount">KSH 100 </string>
     <string name="button_ok">OK</string>
@@ -61,6 +86,25 @@
         If you choose to use our Service, then you agree to the collection and use of information in relation to this policy.
         The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
         The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at e-loan unless otherwise defined in this Privacy Policy.
+        \n\n<b>Rates, fees and repayment periods.</b>
+        \n\nOur loans are subject to an initial fee of 100 ksh that is paid upon accepting these terms and conditions, checking your loan limit and your eligibility being confirmed.
+        \nLoan repayment period is between 3 months to 6 months. Failure to repay your loan within this period, e-loan reserves the right to institute loan recovery options it may deem fit.
+        \nWe provide the loan by depositing it into the phone number provided upon registration, this phone number also acts as your username.
+        \nFees and charges that apply to the loan may be deducted from the loan before depositing it into your M-PESA.
+        \n\nInterest, fees and charges
+        \n\nInterest
+        \nThe interest rate on our loans is at a market low 10 %  of the total amount loaned out to you.i.e if you qualify for a loan of 1000 ksh,
+        then you shall repay 1100 ksh at the within the repayment period. No punitive interests accrue on your loan.
+        \nYou must pay the loan within the stipulated 3 to 6 months at the flat rate set of 10% interest.
+        \nUnless otherwise specified in our agreement, interest is calculated on a 30/360 day year basis.
+        \nInterest and loans is payable on the dates set out in the approval or elsewhere in our agreement.
+        \nIf we vary the interest rate, we will give you notice of the effective date of the revised interest rate. We may notify you by public announcement in daily newspapers
+        , email communication, SMS or through our app. You accept such notification as adequate.
+        \n\nRepayment
+        \nRepayment by instalments
+        \nYou may repay the loan in instalments. We notify you the amount of the instalment and each instalment payment date via sms when your loan request is approved.
+        \nThe instalments are payable even if you do not withdraw any of the loan funds we deposit in your account.
+        \nIf we vary the interest rate on the loan, we may vary the instalment amount and/or the number of instalments.
         \n\n<b>Information Collection and Use.</b>
         \n\nFor a better experience ,while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to Name, phone number.
         The information that we request will be retained by us and used as described in this privacy policy.
@@ -84,7 +128,7 @@
         \n\n<b>Links to Other Sites.</b>
         \n\nThis Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
         \n\n<b>Children’s Privacy.</b>
-        \n\nThese Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.
+        \n\nThese Services do not address anyone under the age of 16. We do not knowingly collect personally identifiable information from children under 16. In the case we discover that a child under 16 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.
         \n\n<b>Changes to This Privacy Policy.</b>
         \n\nWe may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
         \nThis policy is effective as of 2020-11-16
